@@ -1,0 +1,38 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.btn-outline-primary:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+
+.navbar-nav .nav-link.active {
+    color: #ffc107 !important;
+    font-weight: bold;
+}
+
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 300px;
+    }
+}
