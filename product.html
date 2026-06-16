@@ -6,10 +6,10 @@
     <title>Products | Artisan Market Hub</title>
     
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVJkEZSMUkrQ6usKu8zqV84q2xp5DJBVB+DII3r7sq8PINF5PV/uqWGrNcWYONotOoVa/ipXE8w==" crossorigin="anonymous">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -201,8 +201,20 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS (CDN with local fallback) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+        // If CDN bootstrap fails to load (or SRI not used), load local copy as a fallback
+        (function(){
+            if(typeof bootstrap === 'undefined'){
+                var s = document.createElement('script');
+                s.src = 'js/bootstrap.bundle.min.js';
+                s.onload = function(){ console.info('Loaded local Bootstrap fallback.'); };
+                s.onerror = function(){ console.error('Failed to load Bootstrap from CDN and local fallback.'); };
+                document.head.appendChild(s);
+            }
+        })();
+    </script>
     
     <!-- Custom JS -->
     <script src="js/main.js"></script>
