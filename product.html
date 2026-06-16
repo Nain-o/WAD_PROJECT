@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Artisan Market Hub</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ====== NAVIGATION ====== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-hands"></i> Artisan Market Hub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="artisans.html">Artisans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testimonials.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ====== PRODUCTS PAGE ====== -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-3">Our Artisan Products</h2>
+            <p class="text-center text-muted mb-4">Browse our collection of handmade goods</p>
+
+            <!-- Filter Buttons -->
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="baked">Baked Goods</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="ceramics">Ceramics</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="wood">Woodworking</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="jewelry">Jewelry</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row g-4" id="productGrid">
+                <!-- Product 1 - Baked -->
+                <div class="col-md-4 product-item" data-category="baked">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop" class="card-img-top" alt="Sourdough bread">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Baked Goods</span>
+                            <h5 class="card-title">Wild Yeast Sourdough</h5>
+                            <p class="card-text">72-hour fermentation. Organic flour, perfect crust.</p>
+                            <p class="h5 text-primary">$8.50</p>
+                            <small class="text-muted">By Maria's Bakery</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 - Ceramics -->
+                <div class="col-md-4 product-item" data-category="ceramics">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=400&h=300&fit=crop" class="card-img-top" alt="Pottery mug">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Ceramics</span>
+                            <h5 class="card-title">Glazed Stoneware Mug</h5>
+                            <p class="card-text">Hand-thrown. Microwave and dishwasher safe.</p>
+                            <p class="h5 text-primary">$28.00</p>
+                            <small class="text-muted">By Emma Ceramics</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 - Wood -->
+                <div class="col-md-4 product-item" data-category="wood">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400&h=300&fit=crop" class="card-img-top" alt="Cutting board">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Woodworking</span>
+                            <h5 class="card-title">Walnut Cutting Board</h5>
+                            <p class="card-text">End-grain construction. Food-safe mineral oil finish.</p>
+                            <p class="h5 text-primary">$65.00</p>
+                            <small class="text-muted">By Oak & Iron Woodworks</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 - Jewelry -->
+                <div class="col-md-4 product-item" data-category="jewelry">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop" class="card-img-top" alt="Silver necklace">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Jewelry</span>
+                            <h5 class="card-title">Handmade Silver Necklace</h5>
+                            <p class="card-text">Sterling silver with natural gemstone pendant.</p>
+                            <p class="h5 text-primary">$45.00</p>
+                            <small class="text-muted">By Luna Jewelry</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 - Baked -->
+                <div class="col-md-4 product-item" data-category="baked">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop" class="card-img-top" alt="Croissants">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Baked Goods</span>
+                            <h5 class="card-title">Butter Croissants (6-pack)</h5>
+                            <p class="card-text">Flaky, buttery, made fresh daily.</p>
+                            <p class="h5 text-primary">$12.00</p>
+                            <small class="text-muted">By Maria's Bakery</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 - Ceramics -->
+                <div class="col-md-4 product-item" data-category="ceramics">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=400&h=300&fit=crop" class="card-img-top" alt="Ceramic vase">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Ceramics</span>
+                            <h5 class="card-title">Handmade Ceramic Vase</h5>
+                            <p class="card-text">Glazed in earthy tones. Perfect for dried flowers.</p>
+                            <p class="h5 text-primary">$42.00</p>
+                            <small class="text-muted">By Emma Ceramics</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 - Wood -->
+                <div class="col-md-4 product-item" data-category="wood">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1551522435-a13afa10f5fb?w=400&h=300&fit=crop" class="card-img-top" alt="Wooden shelf">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Woodworking</span>
+                            <h5 class="card-title">Floating Wall Shelf</h5>
+                            <p class="card-text">Reclaimed oak. Holds up to 50 lbs.</p>
+                            <p class="h5 text-primary">$85.00</p>
+                            <small class="text-muted">By Oak & Iron Woodworks</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 - Jewelry -->
+                <div class="col-md-4 product-item" data-category="jewelry">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop" class="card-img-top" alt="Beaded bracelet">
+                        <div class="card-body">
+                            <span class="badge bg-warning text-dark mb-2">Jewelry</span>
+                            <h5 class="card-title">Handwoven Beaded Bracelet</h5>
+                            <p class="card-text">Natural stone beads with adjustable closure.</p>
+                            <p class="h5 text-primary">$22.00</p>
+                            <small class="text-muted">By Luna Jewelry</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Artisan Market Hub</h5>
+                    <p>Supporting local craftspeople since 2020</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li><a href="products.html" class="text-white-50 text-decoration-none">Products</a></li>
+                        <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="#" class="text-white-50"><i class="fab fa-twitter fa-lg"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <small>&copy; 2026 Artisan Market Hub. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
