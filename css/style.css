@@ -36,3 +36,56 @@ html {
         height: 300px;
     }
 }
+/* ============================================
+   PRODUCT FILTERING STYLES
+   ============================================ */
+
+.filter-btn {
+    margin: 0 4px 8px 4px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: #8b5e3c;
+    color: white;
+    border-color: #8b5e3c;
+}
+
+.filter-btn:hover:not(.active) {
+    background-color: #f0e8e0;
+}
+
+/* Product card animations */
+.product-item {
+    transition: all 0.4s ease;
+}
+
+/* Artisan card image sizing */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .object-fit-cover {
+        height: 200px;
+        width: 100%;
+    }
+}
+
+/* Badge styling */
+.badge {
+    font-weight: 500;
+    padding: 6px 14px;
+}
+
+/* Card hover effects for artisans */
+.card .row {
+    transition: all 0.3s ease;
+}
+
+.card:hover .row {
+    background-color: #faf8f5;
+    border-radius: 12px;
+}
