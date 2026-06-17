@@ -89,3 +89,149 @@ html {
     background-color: #faf8f5;
     border-radius: 12px;
 }
+/* ============================================
+   EVENTS PAGE SPECIFIC STYLES
+   ============================================ */
+
+/* ---- Featured Event Card ---- */
+.featured-event {
+    border: 2px solid #e6a756;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.featured-event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.featured-event .card-body {
+    padding: 30px;
+}
+
+.featured-event .badge-featured {
+    background: #e6a756;
+    color: #2c2c2c;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.featured-event img {
+    height: 100%;
+    min-height: 300px;
+    object-fit: cover;
+}
+
+/* ---- Event Cards ---- */
+.event-card {
+    border: 1px solid #e8ddd0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    background: white;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(139, 94, 60, 0.15);
+    border-color: #e6a756;
+}
+
+.event-card .card-body {
+    padding: 20px;
+}
+
+.event-card .event-date {
+    background: #f8f4f0;
+    padding: 6px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #5a3d2b;
+}
+
+.event-card .event-icon {
+    font-size: 1.2rem;
+    color: #8b5e3c;
+    margin-right: 8px;
+    width: 20px;
+}
+
+/* ---- Event Badge Colors ---- */
+.badge-event-workshop {
+    background: #e6a756;
+    color: #2c2c2c;
+    font-weight: 500;
+    padding: 6px 14px;
+}
+
+.badge-event-market {
+    background: #4a7c6f;
+    color: white;
+    font-weight: 500;
+    padding: 6px 14px;
+}
+
+.badge-event-holiday {
+    background: #c0392b;
+    color: white;
+    font-weight: 500;
+    padding: 6px 14px;
+}
+
+/* ---- Event Details List ---- */
+.event-details {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.event-details li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0ebe5;
+    font-size: 0.95rem;
+}
+
+.event-details li:last-child {
+    border-bottom: none;
+}
+
+.event-details i {
+    color: #8b5e3c;
+    width: 24px;
+    margin-right: 8px;
+}
+
+/* ---- Responsive Adjustments ---- */
+@media (max-width: 768px) {
+    .featured-event img {
+        min-height: 200px;
+    }
+    
+    .featured-event .card-body {
+        padding: 20px;
+    }
+    
+    .event-card .card-body {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-event .card-body h3 {
+        font-size: 1.3rem;
+    }
+    
+    .event-card .event-date {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+}

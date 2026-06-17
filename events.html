@@ -46,15 +46,32 @@
             <h2 class="text-center mb-3">Upcoming Markets & Events</h2>
             <p class="text-center text-muted mb-5">Join us at these upcoming artisan gatherings</p>
 
+            <!-- ===== COUNTDOWN TIMER ===== -->
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <div class="bg-light p-4 rounded shadow-sm">
+                        <h4 class="mb-3">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            Next Event Countdown
+                        </h4>
+                        <div id="eventCountdown"></div>
+                        <p class="text-muted small mt-2">Summer Artisan Fair - June 25, 2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== REGISTRATION MESSAGE CONTAINER ===== -->
+            <div id="registrationMessage" class="mb-4"></div>
+
             <!-- Featured Event -->
-            <div class="card mb-5 shadow-lg border-0">
+            <div class="card mb-5 shadow-lg border-0 featured-event">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="https://images.unsplash.com/photo-1533900298318-6b8da08a523e?w=600&h=400&fit=crop" class="img-fluid rounded-start h-100" alt="Artisan market">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <span class="badge bg-danger mb-2">Featured Event</span>
+                            <span class="badge badge-featured mb-2">★ Featured Event</span>
                             <h3 class="card-title">Summer Artisan Fair 2026</h3>
                             <p class="card-text">
                                 <i class="fas fa-calendar-alt text-primary me-2"></i>
@@ -69,7 +86,29 @@
                                 <strong>Location:</strong> Downtown Artisan Square, Portland, OR
                             </p>
                             <p class="card-text">Join 50+ local artisans for a weekend of shopping, live music, and food trucks. Free admission!</p>
-                            <a href="#" class="btn btn-primary">Add to Calendar</a>
+                            
+                            <!-- ===== INTERACTIVE BUTTONS FOR FEATURED EVENT ===== -->
+                            <div class="mt-3">
+                                <!-- Register Button -->
+                                <button class="btn btn-primary register-btn me-2" data-event-name="Summer Artisan Fair 2026">
+                                    <i class="fas fa-check-circle me-1"></i> Register Now
+                                </button>
+                                
+                                <!-- Add to Calendar Button -->
+                                <button class="btn btn-outline-primary calendar-btn me-2" 
+                                        data-event-name="Summer Artisan Fair 2026"
+                                        data-event-date="2026-06-25"
+                                        data-event-time="09:00:00"
+                                        data-event-location="Downtown Artisan Square, Portland, OR">
+                                    <i class="fas fa-calendar-plus me-1"></i> Add to Calendar
+                                </button>
+                                
+                                <!-- Share Button -->
+                                <button class="btn btn-outline-secondary share-btn" 
+                                        data-event-name="Summer Artisan Fair 2026">
+                                    <i class="fas fa-share-alt me-1"></i> Share
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -78,11 +117,11 @@
             <!-- Upcoming Events Grid -->
             <h4 class="mb-4">More Upcoming Events</h4>
             <div class="row g-4">
-                <!-- Event 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
+                <!-- Event 1 - Pottery Workshop -->
+                <div class="col-md-4 event-item" data-category="workshop">
+                    <div class="card h-100 shadow-sm event-card">
                         <div class="card-body">
-                            <span class="badge bg-warning text-dark mb-2">Workshop</span>
+                            <span class="badge badge-event-workshop mb-2">Workshop</span>
                             <h5 class="card-title">Pottery Workshop</h5>
                             <p class="card-text">
                                 <i class="fas fa-calendar-alt text-primary me-2"></i>July 5, 2026
@@ -91,16 +130,29 @@
                                 <i class="fas fa-clock text-primary me-2"></i>2:00 PM - 5:00 PM
                             </p>
                             <p class="card-text">Learn hand-building techniques with Emma Ceramics. All materials included.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                            
+                            <!-- ===== INTERACTIVE BUTTONS FOR WORKSHOP ===== -->
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-sm register-btn" data-event-name="Pottery Workshop">
+                                    Register
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm calendar-btn" 
+                                        data-event-name="Pottery Workshop"
+                                        data-event-date="2026-07-05"
+                                        data-event-time="14:00:00"
+                                        data-event-location="Emma's Studio, Santa Fe, NM">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Event 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
+                <!-- Event 2 - Bread Making -->
+                <div class="col-md-4 event-item" data-category="workshop">
+                    <div class="card h-100 shadow-sm event-card">
                         <div class="card-body">
-                            <span class="badge bg-warning text-dark mb-2">Workshop</span>
+                            <span class="badge badge-event-workshop mb-2">Workshop</span>
                             <h5 class="card-title">Bread Making 101</h5>
                             <p class="card-text">
                                 <i class="fas fa-calendar-alt text-primary me-2"></i>July 12, 2026
@@ -109,16 +161,29 @@
                                 <i class="fas fa-clock text-primary me-2"></i>10:00 AM - 2:00 PM
                             </p>
                             <p class="card-text">Master sourdough with Maria's Bakery. Take home your own starter.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                            
+                            <!-- ===== INTERACTIVE BUTTONS FOR WORKSHOP ===== -->
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-sm register-btn" data-event-name="Bread Making 101">
+                                    Register
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm calendar-btn" 
+                                        data-event-name="Bread Making 101"
+                                        data-event-date="2026-07-12"
+                                        data-event-time="10:00:00"
+                                        data-event-location="Maria's Bakery, Portland, OR">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Event 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
+                <!-- Event 3 - Fall Harvest Market -->
+                <div class="col-md-4 event-item" data-category="market">
+                    <div class="card h-100 shadow-sm event-card">
                         <div class="card-body">
-                            <span class="badge bg-info text-dark mb-2">Market</span>
+                            <span class="badge badge-event-market mb-2">Market</span>
                             <h5 class="card-title">Fall Harvest Market</h5>
                             <p class="card-text">
                                 <i class="fas fa-calendar-alt text-primary me-2"></i>September 15-17, 2026
@@ -127,16 +192,29 @@
                                 <i class="fas fa-clock text-primary me-2"></i>10:00 AM - 5:00 PM
                             </p>
                             <p class="card-text">Celebrate the harvest season with autumn-themed crafts and treats.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                            
+                            <!-- ===== INTERACTIVE BUTTONS FOR MARKET ===== -->
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-sm register-btn" data-event-name="Fall Harvest Market">
+                                    Register
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm calendar-btn" 
+                                        data-event-name="Fall Harvest Market"
+                                        data-event-date="2026-09-15"
+                                        data-event-time="10:00:00"
+                                        data-event-location="Artisan Square, Portland, OR">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Event 4 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm">
+                <!-- Event 4 - Holiday Craft Market -->
+                <div class="col-md-4 event-item" data-category="holiday">
+                    <div class="card h-100 shadow-sm event-card">
                         <div class="card-body">
-                            <span class="badge bg-info text-dark mb-2">Market</span>
+                            <span class="badge badge-event-holiday mb-2">Holiday Market</span>
                             <h5 class="card-title">Holiday Craft Market</h5>
                             <p class="card-text">
                                 <i class="fas fa-calendar-alt text-primary me-2"></i>December 12-13, 2026
@@ -145,7 +223,20 @@
                                 <i class="fas fa-clock text-primary me-2"></i>10:00 AM - 7:00 PM
                             </p>
                             <p class="card-text">Perfect for early holiday shopping! Unique gifts for everyone on your list.</p>
-                            <a href="#" class="btn btn-outline-primary btn-sm">Learn More</a>
+                            
+                            <!-- ===== INTERACTIVE BUTTONS FOR HOLIDAY MARKET ===== -->
+                            <div class="mt-3">
+                                <button class="btn btn-primary btn-sm register-btn" data-event-name="Holiday Craft Market">
+                                    Register
+                                </button>
+                                <button class="btn btn-outline-primary btn-sm calendar-btn" 
+                                        data-event-name="Holiday Craft Market"
+                                        data-event-date="2026-12-12"
+                                        data-event-time="10:00:00"
+                                        data-event-location="Artisan Square, Portland, OR">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

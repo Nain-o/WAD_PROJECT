@@ -1,70 +1,34 @@
-# WAD_PROJECT
-This will be the CAT II project for web application development
-# Artisan Market Hub
+# The Hearth & Crumb 
 
-A fully responsive, multi-page web application showcasing local artisans, handmade products, and community market events. Built for a Web Application Development assignment.
+A home-based bakery & café — multi-page, responsive website built with HTML5, CSS3, Bootstrap 5, and vanilla JavaScript.
 
-##  Project Overview
+## About the project
 
-This website connects local craftspeople with customers by providing:
-- Product discovery with filtering capabilities
-- Artisan profiles and stories
-- Upcoming market events calendar
-- Contact form with validation
-- Responsive design for all devices
+The Hearth & Crumb is a café-bakery that i hope to bring to life, known for scratch-made cakes, pastries, and slow-brewed coffee. This site is the front end for the business: a place for visitors to browse the menu, learn the bakery's story, place custom cake orders, and find visiting hours.
 
-##  Technologies Used
+## Tech stack
 
-- **HTML5** - Semantic markup
-- **CSS3** - Custom styling with Flexbox/Grid
-- **JavaScript (ES6+)** - Interactive features (product filtering, form validation)
-- **Bootstrap 5** - Responsive grid system and components
-- **Font Awesome** - Icons for enhanced UI
+- HTML5 / CSS3 (custom styles layered on Bootstrap)
+- Bootstrap 5
+- JavaScript (ES6+)
+- Git & GitHub for version control
 
-##  Project Structure
+## Pages
 
-artisan-market-hub/
-├── index.html # Home page with hero carousel
-├── products.html # Filterable product gallery
-├── artisans.html # Artisan profiles
-├── events.html # Market events calendar
-├── blog.html # News and articles
-├── blog-post.html # Sample blog article
-├── testimonials.html # Customer reviews
-├── faq.html # Accordion FAQ section
-├── contact.html # Contact form with validation
-├── css/
-│ └── style.css # Custom styles
-├── js/
-│ └── main.js # Interactive features
-├── assets/
-│ └── images/ # All project images
-└── README.md # This file
+| Page | File | Purpose |
+|---|---|---|
+| Home | `index.html` | Hero, featured treats, today's picks, hours preview |
+| About | `about.html` | Bakery story, team, sourcing philosophy |
+| Menu | `menu.html` | Full menu, filterable by category  |
+| Gallery | `gallery.html` | Photos of treats, the café, and events |
+| Journal | `journal.html` | Blog-style posts: recipes & behind-the-scenes |
+| Order & Catering | `order.html` | Custom order form with JS validation |
+| Contact | `contact.html` | Location, hours, contact form |
+| FAQ | `faq.html` | Ordering, allergy, and visiting questions |
 
 
-## Features
-
-### Core Features
-- **7+ Interlinked Pages** - Complete navigation system
-- **Responsive Design** - Works on desktop, tablet, and mobile
-- **Bootstrap Components** - Navbar, cards, carousel, accordion
-
-### JavaScript Interactivity
-1. **Product Filtering** - Filter gallery by category (pottery/food/wood)
-2. **Contact Form Validation** - Real-time validation with error messages
 
 
-## Pages & Navigation
 
-| Page | Description |
-|------|-------------|
-| Home | Hero carousel, featured products, upcoming events |
-| Products | Filterable gallery of artisan goods |
-| Artisans | Profiles of local craftspeople |
-| Events | Upcoming market dates and workshops |
-| Blog | News and artisan stories |
-| Testimonials | Customer reviews |
-| FAQ | Common questions (accordion style) |
-| Contact | Form with validation |
 
 
