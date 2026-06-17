@@ -1,237 +1,271 @@
 
-html {
-    scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;700&family=Caveat:wght@500;700&display=swap');
+
+:root {
+  --kraft: #e0cda9;
+  --kraft-light: #f6efdd;
+  --walnut: #4b3621;
+  --walnut-soft: #6b4f33;
+  --forest: #41562f;
+  --forest-dark: #324322;
+  --copper: #b5651d;
+  --copper-light: #d88a47;
+  --chalkboard: #2e3b2c;
+  --chalk-white: #f2efe6;
+
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Karla', sans-serif;
+  --font-accent: 'Caveat', cursive;
 }
 
-
-.btn-outline-primary:hover {
-    transform: translateY(-2px);
-    transition: transform 0.2s ease;
+/* ---------- base ---------- */
+body {
+  font-family: var(--font-body);
+  color: var(--walnut);
+  background-color: var(--kraft-light);
 }
 
-
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+h1, h2, h3, h4, .navbar-brand, .font-display {
+  font-family: var(--font-display);
+  color: var(--walnut);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+a {
+  text-decoration: none;
 }
 
-
-.navbar-nav .nav-link.active {
-    color: #ffc107 !important;
-    font-weight: bold;
+:focus-visible {
+  outline: 3px solid var(--copper);
+  outline-offset: 2px;
 }
 
-
-.carousel-item img {
-    height: 500px;
-    object-fit: cover;
+/* ---------- navbar ---------- */
+.navbar {
+  background-color: var(--kraft) !important;
+  border-bottom: 2px solid var(--walnut);
+  padding-top: .9rem;
+  padding-bottom: .9rem;
 }
 
-@media (max-width: 768px) {
-    .carousel-item img {
-        height: 300px;
-    }
-}
-/* ============================================
-   PRODUCT FILTERING STYLES
-   ============================================ */
-
-.filter-btn {
-    margin: 0 4px 8px 4px;
-    padding: 8px 20px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: .02em;
 }
 
-.filter-btn.active {
-    background-color: #8b5e3c;
-    color: white;
-    border-color: #8b5e3c;
+.navbar .nav-link {
+  color: var(--walnut) !important;
+  font-weight: 700;
+  margin: 0 .35rem;
+  border-bottom: 2px solid transparent;
 }
 
-.filter-btn:hover:not(.active) {
-    background-color: #f0e8e0;
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--forest) !important;
+  border-bottom-color: var(--copper);
 }
 
-/* Product card animations */
-.product-item {
-    transition: all 0.4s ease;
+/* ---------- hero ---------- */
+.hero {
+  background: linear-gradient(160deg, var(--walnut) 0%, var(--forest-dark) 100%);
+  color: var(--chalk-white);
+  padding: 5.5rem 1rem 6rem;
 }
 
-/* Artisan card image sizing */
-.object-fit-cover {
-    object-fit: cover;
+.hero-tag {
+  display: inline-block;
+  background-color: var(--chalkboard);
+  color: var(--chalk-white);
+  font-family: var(--font-accent);
+  font-size: 1.25rem;
+  padding: .35rem 1.1rem;
+  border-radius: 999px;
+  border: 1px dashed var(--kraft);
+  margin-bottom: 1.25rem;
 }
 
-@media (max-width: 768px) {
-    .object-fit-cover {
-        height: 200px;
-        width: 100%;
-    }
+.hero h1 {
+  color: var(--chalk-white);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
 }
 
-/* Badge styling */
-.badge {
-    font-weight: 500;
-    padding: 6px 14px;
+.hero p.lead {
+  color: var(--kraft-light);
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Card hover effects for artisans */
-.card .row {
-    transition: all 0.3s ease;
+.btn-copper {
+  background-color: var(--copper);
+  border-color: var(--copper);
+  color: var(--chalk-white);
+  font-weight: 700;
+  padding: .6rem 1.4rem;
 }
 
-.card:hover .row {
-    background-color: #faf8f5;
-    border-radius: 12px;
-}
-/* ============================================
-   EVENTS PAGE SPECIFIC STYLES
-   ============================================ */
-
-/* ---- Featured Event Card ---- */
-.featured-event {
-    border: 2px solid #e6a756;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: white;
+.btn-copper:hover {
+  background-color: var(--copper-light);
+  border-color: var(--copper-light);
+  color: var(--walnut);
 }
 
-.featured-event:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+.btn-outline-kraft {
+  background-color: transparent;
+  border: 2px solid var(--kraft-light);
+  color: var(--chalk-white);
+  font-weight: 700;
+  padding: .55rem 1.35rem;
 }
 
-.featured-event .card-body {
-    padding: 30px;
+.btn-outline-kraft:hover {
+  background-color: var(--kraft-light);
+  color: var(--walnut);
 }
 
-.featured-event .badge-featured {
-    background: #e6a756;
-    color: #2c2c2c;
-    font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+/* ---------- intro / story ---------- */
+.section-kraft {
+  background-color: var(--kraft-light);
+  padding: 4.5rem 0;
 }
 
-.featured-event img {
-    height: 100%;
-    min-height: 300px;
-    object-fit: cover;
+.image-placeholder {
+  background-color: var(--kraft);
+  border: 2px dashed var(--walnut-soft);
+  color: var(--walnut-soft);
+  border-radius: .75rem;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: .95rem;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* ---- Event Cards ---- */
-.event-card {
-    border: 1px solid #e8ddd0;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    height: 100%;
-    background: white;
+/* ---------- featured treats ---------- */
+.section-treats {
+  background-color: var(--kraft);
+  padding: 4.5rem 0;
 }
 
-.event-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(139, 94, 60, 0.15);
-    border-color: #e6a756;
+.card-treat {
+  background-color: var(--kraft-light);
+  border: 1px solid var(--walnut-soft);
+  border-radius: 1rem;
+  height: 100%;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.event-card .card-body {
-    padding: 20px;
+@media (prefers-reduced-motion: no-preference) {
+  .card-treat:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(74, 52, 40, .18);
+  }
 }
 
-.event-card .event-date {
-    background: #f8f4f0;
-    padding: 6px 12px;
-    border-radius: 6px;
-    display: inline-block;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #5a3d2b;
+.card-treat .card-title {
+  font-family: var(--font-display);
+  font-weight: 600;
 }
 
-.event-card .event-icon {
-    font-size: 1.2rem;
-    color: #8b5e3c;
-    margin-right: 8px;
-    width: 20px;
+.price-tag {
+  display: inline-block;
+  background-color: var(--copper);
+  color: var(--chalk-white);
+  font-weight: 700;
+  font-size: .85rem;
+  padding: .2rem .6rem;
+  border-radius: .4rem;
 }
 
-/* ---- Event Badge Colors ---- */
-.badge-event-workshop {
-    background: #e6a756;
-    color: #2c2c2c;
-    font-weight: 500;
-    padding: 6px 14px;
+/* ---------- chalkboard signature component ---------- */
+.chalkboard {
+  background-color: var(--chalkboard);
+  color: var(--chalk-white);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  border: 6px solid var(--walnut-soft);
 }
 
-.badge-event-market {
-    background: #4a7c6f;
-    color: white;
-    font-weight: 500;
-    padding: 6px 14px;
+.chalkboard h2 {
+  color: var(--chalk-white);
+  font-family: var(--font-accent);
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
 
-.badge-event-holiday {
-    background: #c0392b;
-    color: white;
-    font-weight: 500;
-    padding: 6px 14px;
+.chalkboard ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.15rem;
 }
 
-/* ---- Event Details List ---- */
-.event-details {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
+.chalkboard li {
+  padding: .4rem 0;
+  border-bottom: 1px dotted rgba(242, 239, 230, .35);
 }
 
-.event-details li {
-    padding: 6px 0;
-    border-bottom: 1px solid #f0ebe5;
-    font-size: 0.95rem;
+.chalkboard li:last-child {
+  border-bottom: none;
 }
 
-.event-details li:last-child {
-    border-bottom: none;
+/* ---------- hours / visit ---------- */
+.section-visit {
+  background-color: var(--forest-dark);
+  color: var(--chalk-white);
+  padding: 4.5rem 0;
 }
 
-.event-details i {
-    color: #8b5e3c;
-    width: 24px;
-    margin-right: 8px;
+.section-visit h2 {
+  color: var(--chalk-white);
 }
 
-/* ---- Responsive Adjustments ---- */
-@media (max-width: 768px) {
-    .featured-event img {
-        min-height: 200px;
-    }
-    
-    .featured-event .card-body {
-        padding: 20px;
-    }
-    
-    .event-card .card-body {
-        padding: 15px;
-    }
+.section-visit .bi {
+  color: var(--copper-light);
+  margin-right: .6rem;
 }
 
-@media (max-width: 576px) {
-    .featured-event .card-body h3 {
-        font-size: 1.3rem;
-    }
-    
-    .event-card .event-date {
-        font-size: 0.75rem;
-        padding: 4px 10px;
-    }
+/* ---------- testimonials ---------- */
+.testimonial-card {
+  background-color: var(--kraft-light);
+  border-left: 4px solid var(--copper);
+  border-radius: .5rem;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.testimonial-card p.quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* ---------- footer ---------- */
+footer.site-footer {
+  background-color: var(--walnut);
+  color: var(--kraft-light);
+  padding: 3rem 0 1.5rem;
+}
+
+footer.site-footer a {
+  color: var(--kraft-light);
+}
+
+footer.site-footer a:hover {
+  color: var(--copper-light);
+}
+
+footer.site-footer .footer-tag {
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  color: var(--kraft);
+}
+
+footer.site-footer hr {
+  border-color: var(--walnut-soft);
+  opacity: .5;
 }
