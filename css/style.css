@@ -1,3 +1,7 @@
+/* ==========================================================================
+   The Hearth & Crumb — custom styles (layered on top of Bootstrap 5)
+   Design tokens: kraft / walnut / forest / copper / chalkboard
+   ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;700&family=Caveat:wght@500;700&display=swap');
 
@@ -268,4 +272,38 @@ footer.site-footer .footer-tag {
 footer.site-footer hr {
   border-color: var(--walnut-soft);
   opacity: .5;
+}
+
+/* ---------- inner-page hero (About / Contact / etc.) ---------- */
+.hero-sm {
+  padding: 3.5rem 1rem 4rem;
+}
+
+/* ---------- icon circle (About: philosophy cards) ---------- */
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--forest);
+  color: var(--chalk-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 1rem;
+}
+
+/* ---------- team / info cards (About / Contact) ---------- */
+.card-team {
+  background-color: var(--kraft-light);
+  border: 1px solid var(--walnut-soft);
+  border-radius: 1rem;
+  height: 100%;
+}
+
+/* ---------- contact form ---------- */
+.contact-info-list .bi {
+  color: var(--copper);
+  margin-right: .6rem;
+  width: 1.2rem;
 }
