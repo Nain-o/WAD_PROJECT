@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Place a custom cake or catering order with The Hearth & Crumb in Parklands, Nairobi. Custom celebration cakes, bulk pastry orders, and event catering.">
+  <title>Order & Catering | The Hearth & Crumb</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">The Hearth &amp; Crumb</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Banner ===== -->
+  <header class="hero hero-sm text-center">
+    <div class="container">
+      <span class="hero-tag">Custom cakes &amp; catering</span>
+      <h1 class="mb-3">Order &amp; Catering</h1>
+      <p class="lead mb-0">Tell us what you need and we'll get baking. Minimum 5 days' notice for all custom orders.</p>
+    </div>
+  </header>
+
+  <!-- ===== What we offer ===== -->
+  <section class="section-kraft">
+    <div class="container">
+      <h2 class="text-center mb-5">What We Can Do For You</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="icon-circle"><i class="bi bi-cake2"></i></div>
+          <h3 class="h5">Custom Celebration Cakes</h3>
+          <p>Birthday, wedding, graduation, or just because. We design and bake to your brief — flavour, size, and finish.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-circle"><i class="bi bi-basket"></i></div>
+          <h3 class="h5">Bulk Pastry Orders</h3>
+          <p>Office mornings, baby showers, school events — trays of cinnamon buns, croissants, or scones with 48 hours' notice.</p>
+        </div>
+        <div class="col-md-4">
+          <div class="icon-circle"><i class="bi bi-cup-hot"></i></div>
+          <h3 class="h5">Event Catering</h3>
+          <p>Pastry tables, cake stations, or a full sweet-and-savoury spread for your event. We supply, set up, and pack down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Order form ===== -->
+  <section class="section-treats">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="chalkboard">
+            <h2 class="text-center mb-4">Place Your Order</h2>
+
+            <form id="orderForm" novalidate>
+
+              <!-- Contact details -->
+              <h3 class="h6 text-uppercase mb-3" style="letter-spacing:.08em; color: var(--kraft);">Your Details</h3>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <label for="of-name" class="form-label" style="color:var(--chalk-white)">Full Name</label>
+                  <input type="text" class="form-control" id="of-name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="of-phone" class="form-label" style="color:var(--chalk-white)">Phone Number</label>
+                  <input type="tel" class="form-control" id="of-phone" placeholder="+254 7XX XXX XXX" required>
+                  <div class="invalid-feedback">Please enter a valid phone number.</div>
+                </div>
+                <div class="col-12">
+                  <label for="of-email" class="form-label" style="color:var(--chalk-white)">Email</label>
+                  <input type="email" class="form-control" id="of-email" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+              </div>
+
+              <!-- Order type -->
+              <h3 class="h6 text-uppercase mb-3" style="letter-spacing:.08em; color: var(--kraft);">Order Type</h3>
+              <div class="mb-4">
+                <select class="form-select" id="of-type" required>
+                  <option value="" selected disabled>Choose an order type...</option>
+                  <option value="custom-cake">Custom Celebration Cake</option>
+                  <option value="bulk-pastry">Bulk Pastry Order</option>
+                  <option value="catering">Event Catering</option>
+                </select>
+                <div class="invalid-feedback">Please choose an order type.</div>
+              </div>
+
+              <!-- Event / collection date -->
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <label for="of-date" class="form-label" style="color:var(--chalk-white)">Date Needed</label>
+                  <input type="date" class="form-control" id="of-date" required>
+                  <div class="invalid-feedback">Please choose a date at least 5 days from today.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label for="of-guests" class="form-label" style="color:var(--chalk-white)">Number of Guests / Servings</label>
+                  <input type="number" class="form-control" id="of-guests" min="1" placeholder="e.g. 20" required>
+                  <div class="invalid-feedback">Please enter a number of guests or servings (minimum 1).</div>
+                </div>
+              </div>
+
+              <!-- Details -->
+              <div class="mb-4">
+                <label for="of-details" class="form-label" style="color:var(--chalk-white)">Order Details &amp; Special Requests</label>
+                <textarea class="form-control" id="of-details" rows="4" placeholder="Flavours, dietary requirements, theme, message on the cake..." required></textarea>
+                <div class="invalid-feedback">Please describe your order (at least 20 characters).</div>
+              </div>
+
+              <!-- Allergies -->
+              <div class="mb-4">
+                <label class="form-label" style="color:var(--chalk-white)">Allergy Information</label>
+                <div class="row g-2">
+                  <div class="col-6 col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" id="al-nuts" value="nuts"><label class="form-check-label" style="color:var(--chalk-white)" for="al-nuts">Nut allergy</label></div></div>
+                  <div class="col-6 col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" id="al-gluten" value="gluten"><label class="form-check-label" style="color:var(--chalk-white)" for="al-gluten">Gluten-free needed</label></div></div>
+                  <div class="col-6 col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" id="al-dairy" value="dairy"><label class="form-check-label" style="color:var(--chalk-white)" for="al-dairy">Dairy-free needed</label></div></div>
+                  <div class="col-6 col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" id="al-egg" value="egg"><label class="form-check-label" style="color:var(--chalk-white)" for="al-egg">Egg-free needed</label></div></div>
+                  <div class="col-6 col-md-4"><div class="form-check"><input class="form-check-input" type="checkbox" id="al-vegan" value="vegan"><label class="form-check-label" style="color:var(--chalk-white)" for="al-vegan">Vegan</label></div></div>
+                </div>
+              </div>
+
+              <!-- Success / error -->
+              <div id="of-success" class="alert alert-success d-none" role="alert" tabindex="-1">
+                <strong>Order request received!</strong> We'll confirm availability and send a quote to your email within 24 hours.
+              </div>
+
+              <button type="submit" class="btn btn-copper btn-lg w-100">Submit Order Request</button>
+              <p class="text-center mt-2 small" style="color: var(--kraft);">Submitting this form is a request, not a confirmed order. We'll contact you to confirm and arrange a deposit.</p>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="font-display" style="color: var(--kraft-light);">The Hearth &amp; Crumb</h5>
+          <p class="footer-tag">Baked with love, one batch at a time.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase" style="color: var(--kraft);">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order &amp; Catering</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase" style="color: var(--kraft);">Visit Us</h6>
+          <p class="mb-1">Parklands, Nairobi</p>
+          <p class="mb-1">+254 769 569 639</p>
+          <p class="mb-0">hello@hearthandcrumb.example</p>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center mb-0 small">&copy; <span id="current-year"></span> The Hearth &amp; Crumb. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>
