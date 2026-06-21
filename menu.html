@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse The Hearth & Crumb's full menu — cakes, pastries, café drinks, and seasonal specials, all made from scratch in Parklands, Nairobi.">
+  <title>Menu | The Hearth & Crumb</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">The Hearth &amp; Crumb</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="journal.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Banner ===== -->
+  <header class="hero hero-sm text-center">
+    <div class="container">
+      <span class="hero-tag">Scratch-made daily</span>
+      <h1 class="mb-3">Our Menu</h1>
+      <p class="lead mb-0">Everything baked fresh each morning. Prices in Kenyan Shillings.</p>
+    </div>
+  </header>
+
+  <!-- ===== Filter buttons ===== -->
+  <section class="section-kraft py-4">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-2" id="menuFilters" role="group" aria-label="Filter menu by category">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cakes">Cakes</button>
+        <button class="filter-btn" data-filter="pastries">Pastries &amp; Bread</button>
+        <button class="filter-btn" data-filter="cafe">Café Drinks</button>
+        <button class="filter-btn" data-filter="specials">Today's Specials</button>
+      </div>
+      <p class="text-center small mb-0" style="color: var(--walnut-soft);" id="menuCount"></p>
+    </div>
+  </section>
+
+  <!-- ===== Menu items ===== -->
+  <section class="section-kraft pt-0 pb-5">
+    <div class="container">
+      <div class="row g-4" id="menuGrid">
+
+        <!-- CAKES -->
+        <div class="col-md-6 menu-item" data-category="cakes">
+          <div class="chalkboard h-100">
+            <h2 class="mb-3"><i class="bi bi-cake2 me-2"></i>Cakes</h2>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Red Velvet Layer Cake</span>
+                <p class="item-desc">Three layers, cream-cheese frosting, finished by hand.</p>
+              </div>
+              <span class="item-price">From 3,300 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Lemon Drizzle Cake</span>
+                <p class="item-desc">Bright, zesty sponge with a crisp sugar crust.</p>
+              </div>
+              <span class="item-price">From 2,800 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Chocolate Fudge Cake</span>
+                <p class="item-desc">Dark cocoa layers, ganache filling, chocolate mirror glaze.</p>
+              </div>
+              <span class="item-price">From 3,600 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Carrot &amp; Walnut Cake</span>
+                <p class="item-desc">Warmly spiced, cream-cheese frosting, toasted walnuts on top.</p>
+              </div>
+              <span class="item-price">From 3,000 KSh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CUPCAKES -->
+        <div class="col-md-6 menu-item" data-category="cakes">
+          <div class="chalkboard h-100">
+            <h2 class="mb-3"><i class="bi bi-heart me-2"></i>Cupcakes</h2>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Vanilla Bean Cupcakes</span>
+                <p class="item-desc">Real vanilla bean batter, Swiss meringue swirl.</p>
+              </div>
+              <span class="item-price">450 KSh each</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Chocolate Salted Caramel</span>
+                <p class="item-desc">Fudge cupcake, caramel core, salted caramel frosting.</p>
+              </div>
+              <span class="item-price">480 KSh each</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Strawberry Shortcake</span>
+                <p class="item-desc">Light vanilla sponge, fresh strawberry compote, whipped cream.</p>
+              </div>
+              <span class="item-price">450 KSh each</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Box of 6 (assorted)</span>
+                <p class="item-desc">Mix of whatever's fresh that morning.</p>
+              </div>
+              <span class="item-price">2,400 KSh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASTRIES & BREAD -->
+        <div class="col-md-6 menu-item" data-category="pastries">
+          <div class="chalkboard h-100">
+            <h2 class="mb-3"><i class="bi bi-egg-fried me-2"></i>Pastries</h2>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Cinnamon Morning Buns</span>
+                <p class="item-desc">Laminated dough, brown-sugar cinnamon, glazed warm.</p>
+              </div>
+              <span class="item-price">150 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Honey &amp; Oat Scones</span>
+                <p class="item-desc">Served with clotted cream and seasonal jam.</p>
+              </div>
+              <span class="item-price">200 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Butter Croissant</span>
+                <p class="item-desc">Classic all-butter lamination, 72-hour dough.</p>
+              </div>
+              <span class="item-price">180 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Pain au Chocolat</span>
+                <p class="item-desc">Two dark-chocolate batons inside flaky croissant dough.</p>
+              </div>
+              <span class="item-price">220 KSh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BREAD -->
+        <div class="col-md-6 menu-item" data-category="pastries">
+          <div class="chalkboard h-100">
+            <h2 class="mb-3"><i class="bi bi-basket me-2"></i>Bread</h2>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Country Sourdough Loaf</span>
+                <p class="item-desc">Open crumb, crisp crust, 24-hour ferment.</p>
+              </div>
+              <span class="item-price">650 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Rosemary Focaccia</span>
+                <p class="item-desc">Thick slab, olive oil, flaky sea salt, rosemary.</p>
+              </div>
+              <span class="item-price">400 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div>
+                <span class="item-name">Seeded Whole Wheat</span>
+                <p class="item-desc">Sunflower, sesame, and pumpkin seeds throughout.</p>
+              </div>
+              <span class="item-price">550 KSh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAFÉ DRINKS -->
+        <div class="col-md-6 menu-item" data-category="cafe">
+          <div class="chalkboard h-100">
+            <h2 class="mb-3"><i class="bi bi-cup-hot me-2"></i>Hot Drinks</h2>
+            <div class="menu-row">
+              <div><span class="item-name">Flat White</span><p class="item-desc">Double ristretto, microfoam, local Rivertown roast.</p></div>
+              <span class="item-price">350 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div><span class="item-name">Cappuccino</span><p class="item-desc">Equal parts espresso, steamed milk, and foam.</p></div>
+              <span class="item-price">320 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div><span class="item-name">Masala Chai Latte</span><p class="item-desc">House blend of cardamom, cinnamon, ginger, and clove.</p></div>
+              <span class="item-price">300 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div><span class="item-name">Loose-Leaf Earl Grey</span><p class="item-desc">Served in a pot with warm milk on the side.</p></div>
+              <span class="item-price">280 KSh</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 menu-item" data-category="cafe">
+          <div class="chalkboard h-100">
+            <h2 class="mb-3"><i class="bi bi-cup-straw me-2"></i>Cold Drinks</h2>
+            <div class="menu-row">
+              <div><span class="item-name">Iced Lavender Latte</span><p class="item-desc">Espresso, lavender syrup, oat milk over ice.</p></div>
+              <span class="item-price">380 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div><span class="item-name">Cold Brew</span><p class="item-desc">12-hour steep, served over ice, black or with milk.</p></div>
+              <span class="item-price">350 KSh</span>
+            </div>
+            <div class="menu-row">
+              <div><span class="item-name">Mango &amp; Ginger Cooler</span><p class="item-desc">Fresh mango, ginger syrup, sparkling water.</p></div>
+              <span class="item-price">280 KSh</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TODAY'S SPECIALS -->
+        <div class="col-12 menu-item" data-category="specials">
+          <div class="chalkboard">
+            <h2 class="text-center mb-3">Today's Specials</h2>
+            <div class="row g-3">
+              <div class="col-md-4">
+                <div class="menu-row flex-column align-items-start">
+                  <span class="item-name">Ube Cream Cheese Danish</span>
+                  <p class="item-desc">Purple yam cream cheese swirl in laminated pastry — weekend only.</p>
+                  <span class="item-price">250 KSh</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="menu-row flex-column align-items-start">
+                  <span class="item-name">Brown Butter Banana Bread</span>
+                  <p class="item-desc">Whole loaf or slice. Brown butter, ripe bananas, walnuts.</p>
+                  <span class="item-price">500 KSh / loaf · 120 KSh / slice</span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="menu-row flex-column align-items-start">
+                  <span class="item-name">Affogato Set</span>
+                  <p class="item-desc">Two shots of espresso over a scoop of vanilla bean ice cream.</p>
+                  <span class="item-price">420 KSh</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /row -->
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="section-visit text-center">
+    <div class="container">
+      <h2 class="mb-3">Want Something Custom?</h2>
+      <p class="mb-4" style="color: var(--kraft-light);">Custom celebration cakes, catering trays, and bulk pastry orders taken weekly.</p>
+      <a href="order.html" class="btn btn-copper btn-lg">Place a Custom Order</a>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="font-display" style="color: var(--kraft-light);">The Hearth &amp; Crumb</h5>
+          <p class="footer-tag">Baked with love, one batch at a time.</p>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase" style="color: var(--kraft);">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order &amp; Catering</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6 class="text-uppercase" style="color: var(--kraft);">Visit Us</h6>
+          <p class="mb-1">Parklands, Nairobi</p>
+          <p class="mb-1">+254 769 569 639</p>
+          <p class="mb-0">hello@hearthandcrumb.example</p>
+        </div>
+      </div>
+      <hr>
+      <p class="text-center mb-0 small">&copy; <span id="current-year"></span> The Hearth &amp; Crumb. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>
+ 
