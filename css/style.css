@@ -307,3 +307,66 @@ footer.site-footer hr {
   margin-right: .6rem;
   width: 1.2rem;
 }
+/* ---------- menu page ---------- */
+.filter-btn {
+  background-color: transparent;
+  border: 2px solid var(--walnut-soft);
+  color: var(--walnut);
+  font-weight: 700;
+  border-radius: 999px;
+  padding: .35rem 1.1rem;
+  cursor: pointer;
+  transition: background-color .15s, color .15s;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--walnut);
+  color: var(--chalk-white);
+  border-color: var(--walnut);
+}
+.menu-item.hidden { display: none; }
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dotted var(--walnut-soft);
+  padding: .55rem 0;
+  gap: 1rem;
+}
+.menu-row:last-child { border-bottom: none; }
+.menu-row .item-name { font-family: var(--font-display); font-weight: 600; }
+.menu-row .item-price { font-weight: 700; color: var(--copper); white-space: nowrap; }
+.menu-row .item-desc { font-size: .88rem; color: var(--walnut-soft); margin: 0; }
+
+/* ---------- order page ---------- */
+.order-option-card {
+  border: 2px solid var(--walnut-soft);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: var(--kraft-light);
+  height: 100%;
+}
+
+/* ---------- FAQ accordion ---------- */
+.accordion-button {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  background-color: var(--kraft-light) !important;
+  color: var(--walnut) !important;
+}
+.accordion-button:not(.collapsed) {
+  color: var(--forest) !important;
+  box-shadow: inset 0 -1px 0 var(--walnut-soft);
+}
+.accordion-item {
+  background-color: var(--kraft-light);
+  border: 1px solid var(--walnut-soft);
+  margin-bottom: .5rem;
+  border-radius: .5rem !important;
+  overflow: hidden;
+}
+.accordion-body {
+  background-color: var(--kraft-light);
+  color: var(--walnut);
+}
