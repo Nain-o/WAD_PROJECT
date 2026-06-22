@@ -1,9 +1,3 @@
-/* ==========================================================================
-   The Hearth & Crumb — menu.html
-   JS Feature 1: Category filter for menu items.
-   Clicking a filter button shows only matching .menu-item cards and
-   updates the visible count text.
-   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
