@@ -370,3 +370,33 @@ footer.site-footer hr {
   background-color: var(--kraft-light);
   color: var(--walnut);
 }
+/* ---------- gallery page ---------- */
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: .75rem;
+  border: 2px solid var(--walnut-soft);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gallery-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(74, 52, 40, .2);
+  }
+}
+
+.gallery-placeholder {
+  background-color: var(--kraft);
+  border: 2px dashed var(--walnut-soft);
+  color: var(--walnut-soft);
+  border-radius: .75rem;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .88rem;
+  text-align: center;
+  padding: 1rem;
+}
