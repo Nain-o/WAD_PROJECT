@@ -400,3 +400,98 @@ footer.site-footer hr {
   text-align: center;
   padding: 1rem;
 }
+/* ---------- dark / light mode toggle button (navbar) ---------- */
+#themeToggle {
+  background: none;
+  border: 2px solid var(--walnut-soft);
+  color: var(--walnut);
+  border-radius: 999px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color .15s, color .15s;
+  margin-left: .5rem;
+}
+
+#themeToggle:hover {
+  background-color: var(--walnut);
+  color: var(--chalk-white);
+}
+
+/* ---------- dark mode overrides ---------- */
+body.dark-mode {
+  background-color: #1a1a18;
+  color: var(--kraft-light);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode .navbar-brand {
+  color: var(--kraft-light);
+}
+
+body.dark-mode .navbar {
+  background-color: #2a2118 !important;
+  border-bottom-color: var(--walnut-soft);
+}
+
+body.dark-mode .navbar .nav-link {
+  color: var(--kraft-light) !important;
+}
+
+body.dark-mode #themeToggle {
+  border-color: var(--kraft);
+  color: var(--kraft-light);
+}
+
+body.dark-mode .section-kraft,
+body.dark-mode .section-treats {
+  background-color: #222018;
+}
+
+body.dark-mode .card-treat,
+body.dark-mode .card-team,
+body.dark-mode .journal-card,
+body.dark-mode .testimonial-card {
+  background-color: #2a2118;
+  border-color: var(--walnut-soft);
+  color: var(--kraft-light);
+}
+
+body.dark-mode .accordion-button,
+body.dark-mode .accordion-item,
+body.dark-mode .accordion-body {
+  background-color: #2a2118 !important;
+  color: var(--kraft-light) !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+  background-color: #2a2118;
+  border-color: var(--walnut-soft);
+  color: var(--kraft-light);
+}
+
+body.dark-mode .form-control:focus,
+body.dark-mode .form-select:focus {
+  background-color: #2a2118;
+  color: var(--kraft-light);
+  border-color: var(--copper);
+  box-shadow: 0 0 0 .2rem rgba(181,101,29,.25);
+}
+
+body.dark-mode .site-footer {
+  background-color: #111110;
+}
+
+body.dark-mode .image-placeholder,
+body.dark-mode .gallery-placeholder {
+  background-color: #2a2118;
+  border-color: var(--walnut-soft);
+  color: var(--walnut-soft);
+}
