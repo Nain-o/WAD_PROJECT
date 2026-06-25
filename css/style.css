@@ -703,3 +703,33 @@ body.dark-mode .journal-modal-body h3 {
 body.dark-mode .journal-modal-close {
   filter: invert(1);
 }
+/* ---------- breadcrumb ---------- */
+.breadcrumb-wrap {
+  background-color: var(--kraft);
+  padding: .55rem 0;
+  border-bottom: 1px solid var(--walnut-soft);
+}
+
+.breadcrumb-item a {
+  color: var(--forest);
+  text-decoration: none;
+  font-size: .875rem;
+}
+
+.breadcrumb-item a:hover {
+  color: var(--copper);
+}
+
+.breadcrumb-item.active {
+  color: var(--walnut-soft);
+  font-size: .875rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: var(--walnut-soft);
+}
+
+body.dark-mode .breadcrumb-wrap {
+  background-color: #2a2118;
+  border-color: var(--walnut-soft);
+}
