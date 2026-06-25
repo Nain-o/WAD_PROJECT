@@ -35,6 +35,17 @@
       </div>
     </div>
   </nav>
+  <!-- Breadcrumb -->
+<div class="breadcrumb-wrap">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Menu</li>
+      </ol>
+    </nav>
+  </div>
+</div>
 
   <!-- ===== Banner ===== -->
   <header class="hero hero-sm text-center">
@@ -48,13 +59,14 @@
   <!-- ===== Filter buttons ===== -->
   <section class="section-kraft py-4">
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-2" id="menuFilters" role="group" aria-label="Filter menu by category">
+      <fieldset class="d-flex flex-wrap justify-content-center gap-2 mb-2" id="menuFilters">
+        <legend class="visually-hidden">Filter menu by category</legend>
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="cakes">Cakes</button>
         <button class="filter-btn" data-filter="pastries">Pastries &amp; Bread</button>
         <button class="filter-btn" data-filter="cafe">Café Drinks</button>
         <button class="filter-btn" data-filter="specials">Today's Specials</button>
-      </div>
+      </fieldset>
       <p class="text-center small mb-0" style="color: var(--walnut-soft);" id="menuCount"></p>
     </div>
   </section>
