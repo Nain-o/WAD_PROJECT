@@ -48,13 +48,14 @@
   <!-- ===== Filter bar ===== -->
   <section class="section-kraft py-4">
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-2" id="journalFilters" role="group" aria-label="Filter journal by category">
+      <fieldset class="d-flex flex-wrap justify-content-center gap-2 mb-2 border-0 p-0" id="journalFilters">
+        <legend class="visually-hidden">Filter journal by category</legend>
         <button class="filter-btn active" data-filter="all">All Posts</button>
         <button class="filter-btn" data-filter="tips">Baking Tips</button>
         <button class="filter-btn" data-filter="recipes">Recipes</button>
         <button class="filter-btn" data-filter="stories">Kitchen Stories</button>
         <button class="filter-btn" data-filter="seasonal">Seasonal</button>
-      </div>
+      </fieldset>
       <p class="text-center small mb-0" id="journalCount" style="color: var(--walnut-soft);"></p>
     </div>
   </section>
@@ -75,7 +76,7 @@
               <p class="journal-meta"><i class="bi bi-calendar3 me-1"></i>12 June 2026 &nbsp;·&nbsp; <i class="bi bi-clock me-1"></i>4 min read</p>
               <h2 class="journal-title">Why Your Cinnamon Buns Aren't Rising (And How to Fix It)</h2>
               <p class="journal-excerpt">The most common culprit is water that's too hot — anything above 45 °C kills yeast on contact. We use a simple finger-test, and it's saved more Sunday batches than we can count.</p>
-              <button class="journal-read-more" data-post="post1" aria-label="Read full post: Why your cinnamon buns aren't rising">Read more <i class="bi bi-arrow-right"></i></button>
+              <button class="journal-read-more" data-post="post1">Read more <span class="visually-hidden">full post: Why your cinnamon buns aren't rising</span> <i class="bi bi-arrow-right"></i></button>
             </div>
           </article>
         </div>
@@ -91,7 +92,7 @@
               <p class="journal-meta"><i class="bi bi-calendar3 me-1"></i>5 June 2026 &nbsp;·&nbsp; <i class="bi bi-clock me-1"></i>6 min read</p>
               <h2 class="journal-title">4:30 AM: What the Bakery Looks Like Before Anyone Arrives</h2>
               <p class="journal-excerpt">The first hour is just me and the ovens. No customers, no phone, no music yet — just the smell of the proofer warming up and the quiet satisfaction of knowing Parklands is still asleep.</p>
-              <button class="journal-read-more" data-post="post2" aria-label="Read full post: 4:30 AM at the bakery">Read more <i class="bi bi-arrow-right"></i></button>
+              <button class="journal-read-more" data-post="post2">Read more <span class="visually-hidden">full post: 4:30 AM at the bakery</span> <i class="bi bi-arrow-right"></i></button>
             </div>
           </article>
         </div>
@@ -107,7 +108,7 @@
               <p class="journal-meta"><i class="bi bi-calendar3 me-1"></i>28 May 2026 &nbsp;·&nbsp; <i class="bi bi-clock me-1"></i>8 min read</p>
               <h2 class="journal-title">Our Red Velvet: The Recipe We've Tweaked Every Year Since 2019</h2>
               <p class="journal-excerpt">The secret isn't the colour — it's the balance of buttermilk and vinegar that keeps each layer tender without going dense. Here's how we build it, step by step.</p>
-              <button class="journal-read-more" data-post="post3" aria-label="Read full post: Our red velvet recipe">Read more <i class="bi bi-arrow-right"></i></button>
+              <button class="journal-read-more" data-post="post3">Read more <span class="visually-hidden">full post: Our red velvet recipe</span> <i class="bi bi-arrow-right"></i></button>
             </div>
           </article>
         </div>
@@ -123,7 +124,7 @@
               <p class="journal-meta"><i class="bi bi-calendar3 me-1"></i>18 May 2026 &nbsp;·&nbsp; <i class="bi bi-clock me-1"></i>5 min read</p>
               <h2 class="journal-title">What We're Baking This June: Tropical Flavours &amp; Light Layers</h2>
               <p class="journal-excerpt">June means mangoes are everywhere in Nairobi. We've been testing a mango curd cupcake and a coconut-lime loaf that might just make it onto the July menu.</p>
-              <button class="journal-read-more" data-post="post4" aria-label="Read full post: What we're baking in June">Read more <i class="bi bi-arrow-right"></i></button>
+              <button class="journal-read-more" data-post="post4">Read more <span class="visually-hidden">Read full post: What we're baking in June</span> <i class="bi bi-arrow-right"></i></button>
             </div>
           </article>
         </div>
@@ -139,7 +140,7 @@
               <p class="journal-meta"><i class="bi bi-calendar3 me-1"></i>10 May 2026 &nbsp;·&nbsp; <i class="bi bi-clock me-1"></i>5 min read</p>
               <h2 class="journal-title">The One Thing Home Bakers Always Skip (But Shouldn't)</h2>
               <p class="journal-excerpt">Weighing ingredients. Cups are inconsistent — a packed cup of flour can weigh anywhere from 120 g to 180 g depending on how you scoop. That difference is everything in pastry.</p>
-              <button class="journal-read-more" data-post="post5" aria-label="Read full post: Weighing vs measuring">Read more <i class="bi bi-arrow-right"></i></button>
+              <button class="journal-read-more" data-post="post5">Read more <span class="visually-hidden">about weighing vs measuring</span> <i class="bi bi-arrow-right"></i></button>
             </div>
           </article>
         </div>
@@ -155,7 +156,7 @@
               <p class="journal-meta"><i class="bi bi-calendar3 me-1"></i>2 May 2026 &nbsp;·&nbsp; <i class="bi bi-clock me-1"></i>4 min read</p>
               <h2 class="journal-title">The Customer Who Changed How We Write Our Menu</h2>
               <p class="journal-excerpt">A regular once spent three minutes at the counter trying to figure out what "laminated dough" meant. That afternoon we rewrote every description on the board — plain language, no jargon.</p>
-              <button class="journal-read-more" data-post="post6" aria-label="Read full post: How a customer changed our menu">Read more <i class="bi bi-arrow-right"></i></button>
+              <button class="journal-read-more" data-post="post6">Read more <span class="visually-hidden">about How a customer changed our menu</span> <i class="bi bi-arrow-right"></i></button>
             </div>
           </article>
         </div>
@@ -165,13 +166,13 @@
   </section>
 
   <!-- ===== Post Modal ===== -->
-  <div class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalTitle" aria-modal="true" role="dialog">
+  <dialog class="modal fade" id="postModal" tabindex="-1" aria-labelledby="postModalTitle" aria-modal="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
       <div class="modal-content journal-modal-content">
         <div class="modal-header journal-modal-header">
           <div>
             <span class="journal-tag journal-modal-tag" id="postModalTag"></span>
-            <h2 class="modal-title journal-modal-title mt-2" id="postModalTitle"></h2>
+            <h2 class="modal-title journal-modal-title mt-2" id="postModalTitle">Post title</h2>
             <p class="journal-meta mb-0" id="postModalMeta"></p>
           </div>
           <button type="button" class="btn-close journal-modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -183,7 +184,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </dialog>
 
   <!-- ===== Newsletter CTA ===== -->
   <section class="section-treats">
