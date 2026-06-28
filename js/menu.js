@@ -26,6 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
   });
 
-  // Initialise count on load
+  
   updateCount('all');
 });

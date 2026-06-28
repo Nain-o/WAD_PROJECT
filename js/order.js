@@ -1,18 +1,21 @@
-/* ==========================================================================
-   The Hearth & Crumb — order.html
-   Form validation for the custom order / catering request form.
-   Also enforces the bakery's 5-day minimum notice rule on the date field.
-   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('orderForm');
   if (!form) return;
 
-  // Set the minimum date on the date picker to today + 5 days
+  
   const dateInput = document.getElementById('of-date');
-  const minDate = new Date();
-  minDate.setDate(minDate.getDate() + 5);
-  dateInput.min = minDate.toISOString().split('T')[0];
+  if (!dateInput) return;
+
+  const today = new Date();
+  dateInput.min = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+
+  const getMinDate = () => {
+    const d = new Date();
+    d.setDate(d.getDate() + 5);
+    d.setHours(0, 0, 0, 0);
+    return d;
+  };
 
   const fields = {
     name: {
@@ -35,8 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
       el: dateInput,
       isValid: (v) => {
         if (!v) return false;
-        const chosen = new Date(v);
-        return chosen >= minDate;
+        // Parse as local date (YYYY-MM-DD) to avoid timezone shift
+        const [year, month, day] = v.split('-').map(Number);
+        const chosen = new Date(year, month - 1, day);
+        return chosen >= getMinDate();
       }
     },
     guests: {
@@ -62,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Object.keys(fields).forEach((key) => {
     const { el } = fields[key];
     el.addEventListener('input', () => validateField(key));
+    el.addEventListener('change', () => validateField(key));
     el.addEventListener('blur', () => validateField(key));
   });
 
@@ -78,8 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
       form.reset();
       Object.values(fields).forEach(({ el }) => el.classList.remove('is-valid'));
       successAlert.focus();
-      // Reset date min after reset
-      dateInput.min = minDate.toISOString().split('T')[0];
     } else {
       const firstInvalidKey = Object.keys(fields).find((key) => !validateField(key));
       if (firstInvalidKey) fields[firstInvalidKey].el.focus();
